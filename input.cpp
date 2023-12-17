@@ -3,7 +3,7 @@
 
 Input::Input()
 {
-	button.left = button.right = button.up = button.down = button.escape = false;
+	button.up = button.down = button.escape = button.A = button.Z = button.Q = button.M = false;
 }
 
 Input::Button Input::getButton(void) const
@@ -23,12 +23,6 @@ void Input::InputHandler(sf::Event event, sf::RenderWindow& window)
 		case sf::Keyboard::Escape:
 			button.escape = true;
 			break;
-		case sf::Keyboard::Left:
-			button.left = true;
-			break;
-		case sf::Keyboard::Right:
-			button.right = true;
-			break;
 		case sf::Keyboard::Up:
 			button.up = true;
 			break;
@@ -44,6 +38,9 @@ void Input::InputHandler(sf::Event event, sf::RenderWindow& window)
 		case sf::Keyboard::M:
 			button.M = true;
 			break;
+		case sf::Keyboard::Q:
+			button.Q = true;
+			break;
 		default:
 			break;
 		}
@@ -55,12 +52,6 @@ void Input::InputHandler(sf::Event event, sf::RenderWindow& window)
 		{
 		case sf::Keyboard::Escape:
 			button.escape = false;
-			break;
-		case sf::Keyboard::Left:
-			button.left = false;
-			break;
-		case sf::Keyboard::Right:
-			button.right = false;
 			break;
 		case sf::Keyboard::Up:
 			button.up = false;
@@ -75,6 +66,9 @@ void Input::InputHandler(sf::Event event, sf::RenderWindow& window)
 			button.Z = false;
 		case sf::Keyboard::M:
 			button.M = false;
+			break;
+		case sf::Keyboard::Q:
+			button.Q = false;
 			break;
 		default:
 			break;
