@@ -7,7 +7,7 @@ class Input
 {
 	struct Button
 	{
-		bool left, right, up, down, escape, A, Z, M;
+		bool up, down, escape, A, Z, M, Q;
 	};
 
 public:
